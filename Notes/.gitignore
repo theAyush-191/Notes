@@ -1,0 +1,42 @@
+# Xcode
+.DS_Store
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+
+# Swift Package Manager
+.swiftpm/
+Packages/
+Package.resolved
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Realm / local database files
+*.realm
+*.realm.lock
+*.realm.note
+*.realm.management
+
+# User settings
+*.xcuserstate
+
+# Other
+*.moved-aside
+*.swp
+*.lock
+*.orig
+*.hmap
+*.ipa
+*.app
+
+# Crash logs
+*.crash
