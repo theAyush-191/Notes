@@ -6,17 +6,18 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ContentViewController: UIViewController {
     
-    var noteTitle:String=""
-    var noteContent:String=""
-    var newContent:String = ""
-    var indexPath:Int?
+    let realm=try! Realm()
+    
+    var note:NoteObject!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        contentArea.text=noteContent
-        title=noteTitle
+        contentArea.text=note.content
+        title=note.title
     }
     
     @IBOutlet weak var contentArea: UITextView!
@@ -24,12 +25,10 @@ class ContentViewController: UIViewController {
 
     
     override func viewWillDisappear(_ animated: Bool) {
-        newContent=contentArea.text ?? ""
-        if newContent != noteContent{
-            if let index=indexPath{
-                Notes[index].content=newContent
-            }
-            
+        super.viewWillDisappear(animated)
+        
+        try! realm.write{
+            note.content=contentArea.text
         }
         
        

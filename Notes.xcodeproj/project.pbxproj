@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A97A60A92E5E41ED0089A2C5 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A97A60A82E5E41ED0089A2C5 /* RealmSwift */; };
+		A97A60B22E5E4E370089A2C5 /* SwipeCellKit in Frameworks */ = {isa = PBXBuildFile; productRef = A97A60B12E5E4E370089A2C5 /* SwipeCellKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A97A60782E5DE3640089A2C5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A97A60B22E5E4E370089A2C5 /* SwipeCellKit in Frameworks */,
+				A97A60A92E5E41ED0089A2C5 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +98,7 @@
 				A97A60632E5DE3620089A2C5 /* Notes */,
 				A97A607A2E5DE3640089A2C5 /* NotesTests */,
 				A97A60842E5DE3640089A2C5 /* NotesUITests */,
+				A97A60AB2E5E462F0089A2C5 /* Frameworks */,
 				A97A60622E5DE3620089A2C5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +111,13 @@
 				A97A60812E5DE3640089A2C5 /* NotesUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A97A60AB2E5E462F0089A2C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +140,8 @@
 			);
 			name = Notes;
 			packageProductDependencies = (
+				A97A60A82E5E41ED0089A2C5 /* RealmSwift */,
+				A97A60B12E5E4E370089A2C5 /* SwipeCellKit */,
 			);
 			productName = Notes;
 			productReference = A97A60612E5DE3620089A2C5 /* Notes.app */;
@@ -208,6 +225,10 @@
 			);
 			mainGroup = A97A60582E5DE3620089A2C5;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A97A60A72E5E41ED0089A2C5 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				A97A60B02E5E4E370089A2C5 /* XCRemoteSwiftPackageReference "SwipeCellKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A97A60622E5DE3620089A2C5 /* Products */;
 			projectDirPath = "";
@@ -571,6 +592,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A97A60A72E5E41ED0089A2C5 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A97A60B02E5E4E370089A2C5 /* XCRemoteSwiftPackageReference "SwipeCellKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwipeCellKit/SwipeCellKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A97A60A82E5E41ED0089A2C5 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A97A60A72E5E41ED0089A2C5 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		A97A60B12E5E4E370089A2C5 /* SwipeCellKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A97A60B02E5E4E370089A2C5 /* XCRemoteSwiftPackageReference "SwipeCellKit" */;
+			productName = SwipeCellKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A97A60592E5DE3620089A2C5 /* Project object */;
 }
